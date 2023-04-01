@@ -2,8 +2,10 @@
 
 Streamlit is an open-source Python library that allows you to create web applications quickly and easily. With Streamlit, you can turn your data analysis and machine learning models into interactive web applications that can be easily shared and accessed by others.<br><br>
 
-This is a demo app allows user to see closing stock prices and volumes of a few companies. This project demonstrates the basic structure of streamlit apps, how to take input and how to visualize data<br><br>
-[Click here to visit the app](https://azeemwaqarrao-streamlit-stock-price-app-streamlit-app-sz1ujn.streamlit.app/)<br><br>
+For better understanding [click here](https://azeemwaqar.hashnode.dev/streamlit-stock-price-app-in-python) to read my blog on Streamlit.<br><br>
+
+This is a demo app allows user to see closing stock prices and volumes of a few companies. This project demonstrates the basic structure of streamlit apps, how to take input and how to visualize data.<br><br>
+[Click here to visit the app.](https://azeemwaqarrao-streamlit-stock-price-app-streamlit-app-sz1ujn.streamlit.app/)<br><br>
 
 ## List of companies in the project
 (1) Apple<br>
@@ -16,7 +18,7 @@ This is a demo app allows user to see closing stock prices and volumes of a few 
 
 
 ## To Run the Project
-[1] Clone this repo in your local computer.<br>
+[1] Clone this repo in your local computer.<br><br>
 [2] Create virtaul environment. Open command prompt in the same directory and run the following command,<br>
 ```
 python -m venv venv
