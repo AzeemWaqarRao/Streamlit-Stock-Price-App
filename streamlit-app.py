@@ -3,35 +3,44 @@ import streamlit as st
 import yfinance as yf
 from datetime import date
 
+options = ["AAPL", "GOOGL", "META", "AMZN","TSLA","JNJ","XOM"]
 
 def main():
-    
+    # Setting Title
+    st.title("Stock Price")
 
-    st.write("""
-    # Stock Price 
-    Choose a stock and duration to see graph
-    """)
+    # Setting Header
+    st.subheader("Choose a stock and duration to see graph")
 
-    options = ["AAPL", "GOOGL", "META", "AMZN","TSLA","JNJ","XOM"]
+    # Creating a dropdown
     symbol = st.selectbox("Select an option", options)
+
+    # Taking Date Inputs
     startdate = str(st.date_input("Select a start date", date.today()))
     endtdate = str(st.date_input("Select an end date", date.today()))
 
-    if symbol:
-        tickerData = yf.Ticker(symbol)
-        tickerDf = tickerData.history(period='1d', start=startdate,end=endtdate)
-        st.write("""
-        ### Close Price
+    # Getting stock Data from yahoo finance
+    tickerData = yf.Ticker(symbol)
+    tickerDf = tickerData.history(period='1d', start=startdate,end=endtdate)
+
+    submit = st.button("Get Graphs")
+
+
+    if submit:
+        # Ploting Data
+        st.markdown("""
+        ### Closing Price
         """)
         st.line_chart(tickerDf.Close)
-        st.write("""
+
+        st.markdown("""
         ### Volume
         """)
         st.line_chart(tickerDf.Volume)
     st.markdown("Developed By Azeem Waqar")
     st.write("""
-                [Click here](https://github.com/AzeemWaqarRao/Streamlit-Stock-Price-App) to visit Github Repository.
-                """)
+            [Click here](https://github.com/AzeemWaqarRao/Streamlit-Stock-Price-App) to visit Github Repository.
+            """)
 
 
 
